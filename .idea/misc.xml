@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Aleksey/AndroidStudioProjects/SimpleWeather-master/app/src/main/res/drawable-xxhdpi/clear_sky_night.xml" value="0.17708333333333334" />
+        <entry key="..\:/Users/Aleksey/AndroidStudioProjects/SimpleWeather-master/app/src/main/res/drawable/check_box_selector.xml" value="0.17708333333333334" />
+        <entry key="..\:/Users/Aleksey/AndroidStudioProjects/SimpleWeather-master/app/src/main/res/drawable/clear_sky_day.xml" value="0.17708333333333334" />
+        <entry key="..\:/Users/Aleksey/AndroidStudioProjects/SimpleWeather-master/app/src/main/res/drawable/custom_divider.xml" value="0.17708333333333334" />
+        <entry key="..\:/Users/Aleksey/AndroidStudioProjects/SimpleWeather-master/app/src/main/res/drawable/custom_divider_2dp.xml" value="0.17708333333333334" />
+        <entry key="..\:/Users/Aleksey/AndroidStudioProjects/SimpleWeather-master/app/src/main/res/drawable/empty_weather_background.xml" value="0.17708333333333334" />
+        <entry key="..\:/Users/Aleksey/AndroidStudioProjects/SimpleWeather-master/app/src/main/res/drawable/error_mock_image.xml" value="0.17708333333333334" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

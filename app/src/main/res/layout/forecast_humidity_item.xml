@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_35"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_50"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_75"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
+
+
+    <ImageView
+        android:id="@+id/humidity_icon_iv"
+        style="@style/forecat_header_icon"
+        android:src="@drawable/ic_humidity_round"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/humidity_header_tv"
+        style="@style/forecast_header_tv"
+        android:layout_marginStart="16dp"
+        android:text="@string/humidity_header"
+        app:layout_constraintBottom_toBottomOf="@id/humidity_icon_iv"
+        app:layout_constraintStart_toEndOf="@id/humidity_icon_iv"
+        app:layout_constraintTop_toTopOf="@id/humidity_icon_iv" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/humidity_percent_morning_tv"
+        style="@style/forecast_primary_tv"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@id/humidity_header_tv"
+        tools:text="46%" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipe_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dirty_white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/detail_constraint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:nestedScrollingEnabled="true"
+        tools:context=".ui.weather_screen.DetailFragment">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/detail_rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:itemCount="8" />
+
+        <View
+            android:id="@+id/status_background"
+            android:layout_width="0dp"
+            android:layout_height="24dp"
+            android:alpha="0.0"
+            android:background="@color/status_bar_color"
+            android:elevation="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="0dp"
+            android:layout_height="?attr/actionBarSize"
+            android:alpha="0.0"
+            android:background="@android:color/white"
+            android:elevation="8dp"
+            android:minHeight="?attr/actionBarSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/status_background" />
+
+        <ImageButton
+            android:id="@+id/burger_button"
+            style="@style/match_constrained"
+            android:background="@android:color/transparent"
+            android:elevation="8dp"
+            android:src="@drawable/ic_menu_black_24dp"
+            android:tint="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="@id/toolbar"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintStart_toStartOf="@id/toolbar"
+            app:layout_constraintTop_toTopOf="@id/toolbar" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/toolbar_city_title"
+            style="@style/match_constrained"
+            android:elevation="8dp"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@id/toolbar"
+            app:layout_constraintEnd_toStartOf="@id/setting_button"
+            app:layout_constraintStart_toEndOf="@id/burger_button"
+            app:layout_constraintTop_toTopOf="@id/toolbar"
+            tools:text="krasnodar" />
+
+        <ImageButton
+            android:id="@+id/setting_button"
+            style="@style/match_constrained"
+            android:background="@android:color/transparent"
+            android:elevation="8dp"
+            android:gravity="center"
+            android:src="@drawable/ic_settings_black_24dp"
+            android:tint="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="@id/toolbar"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintEnd_toEndOf="@id/toolbar"
+            app:layout_constraintTop_toTopOf="@id/toolbar" />
+
+        <com.srgpanov.simpleweather.ui.weather_screen.CheckableImageView
+            android:id="@+id/favorite_check_box"
+            style="@style/match_constrained"
+            android:background="@android:color/transparent"
+            android:elevation="8dp"
+            android:gravity="center"
+            android:scaleType="centerInside"
+            android:src="@drawable/check_box_selector"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@id/toolbar"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintEnd_toEndOf="@id/toolbar"
+            app:layout_constraintTop_toTopOf="@id/toolbar" />
+
+        <ImageButton
+            android:id="@+id/back_button"
+            style="@style/match_constrained"
+            android:background="@android:color/transparent"
+            android:elevation="8dp"
+            android:src="@drawable/ic_arrow_back"
+            android:tint="@android:color/white"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@id/toolbar"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintStart_toStartOf="@id/toolbar"
+            app:layout_constraintTop_toTopOf="@id/toolbar" />
+
+
+
+
+        <TextView
+            android:id="@+id/connection_error_tv"
+            android:layout_width="0dp"
+            android:layout_height="72dp"
+            android:background="@android:color/holo_red_light"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="@string/check_your_connection"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@id/insets_error_view"
+            app:layout_constraintEnd_toStartOf="@id/connection_error_button"
+            app:layout_constraintHorizontal_weight="6"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/connection_error_button"
+            android:layout_width="0dp"
+            android:layout_height="72dp"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            android:text="@string/update"
+            android:textColor="@android:color/white"
+            android:visibility="gone"
+            app:cornerRadius="0dp"
+            android:background="@android:color/holo_red_light"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            app:layout_constraintBottom_toTopOf="@id/insets_error_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="2"
+            app:layout_constraintStart_toEndOf="@id/connection_error_tv" />
+
+        <View
+            android:id="@+id/insets_error_view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@android:color/holo_red_light"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/error_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="connection_error_button,connection_error_tv,insets_error_view" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

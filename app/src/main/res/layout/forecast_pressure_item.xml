@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <ImageView
+        android:id="@+id/pressure_icon_iv"
+        style="@style/forecat_header_icon"
+        android:src="@drawable/ic_pressure_round"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/pressure_header_tv"
+        style="@style/forecast_header_tv"
+        android:layout_marginStart="16dp"
+        android:text="@string/pressure_header"
+        app:layout_constraintBottom_toBottomOf="@id/pressure_icon_iv"
+        app:layout_constraintStart_toEndOf="@id/pressure_icon_iv"
+        app:layout_constraintTop_toTopOf="@id/pressure_icon_iv" />
+
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/pressure_value_tv"
+        style="@style/forecast_primary_tv"
+        app:layout_constraintBaseline_toBaselineOf="@id/pressure_header_tv"
+        app:layout_constraintEnd_toStartOf="@id/pressure_scale_tv"
+        android:layout_marginEnd="8dp"
+        tools:text="1018" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/pressure_scale_tv"
+        style="@style/forecast_secondary_small_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@id/pressure_header_tv"
+        android:text="@string/hPa" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

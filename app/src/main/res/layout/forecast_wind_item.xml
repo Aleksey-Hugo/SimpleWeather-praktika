@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_35"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_50"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_75"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
+
+
+    <ImageView
+        android:id="@+id/icon_iv"
+        style="@style/forecat_header_icon"
+        android:src="@drawable/ic_windy_in_round"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/wind_header_tv"
+        style="@style/forecast_header_tv"
+        android:layout_marginStart="16dp"
+        android:text="@string/wind_header"
+        app:layout_constraintBottom_toBottomOf="@id/icon_iv"
+        app:layout_constraintStart_toEndOf="@id/icon_iv"
+        app:layout_constraintTop_toTopOf="@id/icon_iv" />
+
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/wind_speed_morning_tv"
+        style="@style/forecast_primary_tv"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toStartOf="@id/wind_direction_tv"
+        app:layout_constraintBaseline_toBaselineOf="@id/wind_header_tv"
+        android:layout_marginEnd="8dp"
+        tools:text="6 m/s" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/wind_direction_tv"
+        style="@style/forecast_secondary_tv"
+        app:layout_constraintEnd_toStartOf="@id/wind_direction_iv"
+        app:layout_constraintBaseline_toBaselineOf="@id/wind_header_tv"
+        android:layout_marginEnd="4dp"
+        tools:text="E" />
+
+    <ImageView
+        android:id="@+id/wind_direction_iv"
+        style="@style/wind_direction_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/wind_direction_tv"
+        app:layout_constraintTop_toTopOf="@id/wind_direction_tv"
+        tools:src="@drawable/ic_se" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
