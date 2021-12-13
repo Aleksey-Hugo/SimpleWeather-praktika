@@ -1,3 +1,4 @@
 Openweathermap (Weather app key) a9d8828e3be27cb73c019b1c170736bd
 Openweathermap login:Aleksey_Popov 
                password:SSt-aBD-AU6-3AW
+Api Геокодера https://enterprise.api-maps.yandex.ru/<номер версии>/?apikey=<API-ключ>&lang=<идентификатор языка>&<дополнительные параметры>
